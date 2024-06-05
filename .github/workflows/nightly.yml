@@ -8,7 +8,7 @@ jobs:
   build:
     name: build
     runs-on: ubuntu-latest
-    if: github.repository == 'Harry-zklcdc/go-proxy-bingai'
+    if: github.repository == 'kristyzhy/go-proxy-bingai'
     steps:
       - uses: actions/checkout@v3
         with:
@@ -55,8 +55,8 @@ jobs:
       - name: Commit nightly webFile
         run: |
           git checkout -b nightly
-          git config --global user.email "zklcdc@qq.com"
-          git config --global user.name "Harry-zklcdc"
+          git config --global user.email "kristyzhy@gmail.com"
+          git config --global user.name "kristy"
           git add web/*
           git add .devcontainer/Dockerfile
           git commit -m "[Upgrade] 🚀 Upload nightly webFile"
@@ -143,7 +143,7 @@ jobs:
           file: ./docker/Dockerfile  
           push: true
           tags: |
-            docker.io/zklcdc/go-proxy-bingai:nightly
+            jessicayun/go-proxy-bingai:nightly
 
       - name: Delete artifact
         uses: geekyeggo/delete-artifact@v2
@@ -188,4 +188,4 @@ jobs:
           file: ./docker/Dockerfile-nightly-with-pass
           push: true
           tags: |
-            docker.io/zklcdc/go-proxy-bingai:nightly-with-pass
+            jessicayun/go-proxy-bingai:nightly-with-pass
