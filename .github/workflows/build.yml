@@ -118,8 +118,8 @@ jobs:
           file: ./docker/Dockerfile  
           push: true
           tags: |
-            docker.io/zklcdc/go-proxy-bingai:${{ github.ref_name }}
-            docker.io/zklcdc/go-proxy-bingai:latest
+            jessicayun/go-proxy-bingai:${{ github.ref_name }}
+            jessicayun/go-proxy-bingai:latest
 
       - name: Delete artifact
         uses: geekyeggo/delete-artifact@v2
@@ -162,5 +162,5 @@ jobs:
           file: ./docker/Dockerfile-with-pass
           push: true
           tags: |
-            docker.io/zklcdc/go-proxy-bingai:${{ github.ref_name }}-with-pass
-            docker.io/zklcdc/go-proxy-bingai:latest-with-pass
+            jessicayun/go-proxy-bingai:${{ github.ref_name }}-with-pass
+            jessicayun/go-proxy-bingai:latest-with-pass
